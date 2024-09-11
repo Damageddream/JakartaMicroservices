@@ -31,6 +31,7 @@ public class Library {
 
     public Loan loanInfo(String loanId) {
         logger.log(Level.INFO, "Getting loan with ID {0}", loanId);
-        return entityManager.getReference(Loan.class, loanId);
+        return entityManager.find(Loan.class, loanId);
+        //return entityManager.getReference(Loan.class, loanId);
     }
 }
